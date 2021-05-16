@@ -1,0 +1,5 @@
+<layouts>
+<layout id="SummerLayout">
+    <bitmap id="id_summer" x="center" y="center" filename="../drawables/summer.png" />
+</layout>
+</layouts> 

@@ -1,0 +1,11 @@
+<drawables>
+    <bitmap id="LauncherIcon" filename="launcher_icon.png" />
+    <bitmap id="autumnal_img_id" filename="autumnal.png" />
+    <bitmap id="winter_img_id" filename="winter.png" />
+    <bitmap id="vernal_img_id" filename="vernal.png" />
+    <bitmap id="summer_img_id" filename="summer.png" />
+	<bitmap id="meteorol_img_id" filename="meteorol.png" />
+	<bitmap id="astrol_img_id" filename="astrol.png" />
+    <bitmap id="north_hem_img_id" filename="north_hem.png" />
+	<bitmap id="south_hem_img_id" filename="south_hem.png" />
+</drawables>
