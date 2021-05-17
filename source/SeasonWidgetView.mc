@@ -7,7 +7,7 @@ using Toybox.Graphics as Gfx;
 class SeasonWidgetView extends WatchUi.View {
     // Text variables for displaying season/title
 	var seasonTxtSummer, seasonTxtAutumnal, seasonTxtWinter, seasonTxtVernal;
-	var seasonMetTxtSummer, seasonMetTxtAutumnal, seasonMetTxtWinter, seasonMetTxtVernal;
+	var seasonSouthTxtSummer, seasonSouthTxtAutumnal, seasonSouthTxtWinter, seasonSouthTxtVernal;
 	var titleText = "Seasons";
 	var fullDateText = "";
 	var julianDateText = "";
@@ -38,6 +38,10 @@ class SeasonWidgetView extends WatchUi.View {
         seasonTxtAutumnal = WatchUi.loadResource( Rez.Strings.autumnal_text_id );
         seasonTxtWinter = WatchUi.loadResource( Rez.Strings.winter_text_id );
         seasonTxtVernal = WatchUi.loadResource( Rez.Strings.vernal_text_id );
+        seasonSouthTxtSummer = WatchUi.loadResource( Rez.Strings.south_summer_text_id );
+        seasonSouthTxtAutumnal = WatchUi.loadResource( Rez.Strings.south_autumnal_text_id );
+        seasonSouthTxtWinter = WatchUi.loadResource( Rez.Strings.south_winter_text_id );
+        seasonSouthTxtVernal = WatchUi.loadResource( Rez.Strings.south_vernal_text_id );
         // Init images
         seasonImgSummer = WatchUi.loadResource( Rez.Drawables.summer_img_id );
         seasonImgAutumnal = WatchUi.loadResource( Rez.Drawables.autumnal_img_id );
@@ -235,58 +239,50 @@ class SeasonWidgetView extends WatchUi.View {
 			if (nothern_hemisphere == true) {
 		        image = seasonImgVernal;
 		        seasonText = seasonTxtVernal;
-		        // June append text
-		        seasonText += (astrological_option ? "20th" : "1st");
 		    }
 		    else{
 		        image = seasonImgAutumnal;
-		        seasonText = seasonTxtAutumnal;
-		        // Dec. append text
-		        seasonText += (astrological_option ? "21st" : "1st");
-		    }    		
+		        seasonText = seasonSouthTxtAutumnal;
+		    }  
+	        // June append text
+	        seasonText += (astrological_option ? "20th" : "1st");  		
 		}
 		else if(season == SUMMER) {
 			if (nothern_hemisphere == true) {
             	image = seasonImgSummer;
 	        	seasonText = seasonTxtSummer;
-	        	// Sept. append text
-	        	seasonText += (astrological_option ? "22nd" : "1st");
 	   		}
 		    else{
 		        image = seasonImgWinter;
-		        seasonText = seasonTxtWinter;	        	
-		        // March append text
-	        	seasonText += (astrological_option ? "20th" : "1st");
-		    }  
+		        seasonText = seasonSouthTxtWinter;	        	
+		    } 
+        	// Sept. append text
+        	seasonText += (astrological_option ? "22nd" : "1st"); 
 		}
 		else if(season == AUTUMNAL) {
 			if (nothern_hemisphere == true) {
   	        	image = seasonImgAutumnal;
 	        	seasonText = seasonTxtAutumnal;
-	            // Dec. append text
-		        seasonText += (astrological_option ? "21st" : "1st");
 	        }
 	        else{
 		        image = seasonImgVernal;
-		        seasonText = seasonTxtVernal;
-		        // June append text
-		        seasonText += (astrological_option ? "20th" : "1st");
+		        seasonText = seasonSouthTxtVernal;
 		    }  
+            // Dec. append text
+	        seasonText += (astrological_option ? "21st" : "1st");
 		}
 		// WINTER
 		else {
 			if (nothern_hemisphere == true) {
 	    		image = seasonImgWinter;
-		        seasonText = seasonTxtWinter;		        
-		        // March append text
-	        	seasonText += (astrological_option ? "20th" : "1st");
+		        seasonText = seasonTxtWinter;
 		    }
 	     	else{
 		        image = seasonImgSummer;
-		        seasonText = seasonTxtSummer;	        	
-		        // Sept. append text
-	        	seasonText += (astrological_option ? "22nd" : "1st");
+		        seasonText = seasonSouthTxtSummer;	        	
 		    } 
+	        // March append text
+        	seasonText += (astrological_option ? "20th" : "1st");
 		}
     }
     

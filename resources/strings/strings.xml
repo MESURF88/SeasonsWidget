@@ -4,4 +4,8 @@
     <string id="autumnal_text_id">It is Fall! \nWinter Solstice: \nDec. </string>
     <string id="winter_text_id">It is Winter! \nVernal Equinox: \nMarch </string>
 	<string id="vernal_text_id">It is Spring! \nSummer Solstice: \nJune </string>
+	<string id="south_summer_text_id">It is Summer! \nAutumnal Equinox: \nMarch </string>
+    <string id="south_autumnal_text_id">It is Fall! \nWinter Solstice: \nJune </string>
+    <string id="south_winter_text_id">It is Winter! \nVernal Equinox: \nSept. </string>
+	<string id="south_vernal_text_id">It is Spring! \nSummer Solstice: \nDec. </string>
 </strings>
